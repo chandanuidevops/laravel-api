@@ -31,4 +31,6 @@ Route::group([
 
     Route::post('vendors/add', [VendorController::class, 'store']);
     Route::get('vendors/{id}', [VendorController::class, 'show']);
+    Route::post('auth/vendors/login', [AuthController::class, 'login']);
+
 });

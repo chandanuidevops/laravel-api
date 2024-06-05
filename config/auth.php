@@ -46,6 +46,15 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'vendors' => [
+            'driver' => 'session',
+            'provider' => 'vendors',
+        ],
+        'vendors-api' => [
+            'driver' => 'jwt',
+            'provider' => 'vendors',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +78,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'vendors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Vendor::class,
         ],
 
         // 'users' => [

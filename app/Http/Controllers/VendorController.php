@@ -15,6 +15,11 @@ use Illuminate\Validation\Rule;
 
 class VendorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt');
+       
+    }
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [

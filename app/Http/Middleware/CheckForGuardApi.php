@@ -17,8 +17,8 @@ class CheckForGuardApi
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::guard('user-api')->check()) {
-            Auth::shouldUse('user-api');
+        if (Auth::guard('vendors-api')->check()) {
+            Auth::shouldUse('vendors-api');
         } 
         return $next($request);
     }
