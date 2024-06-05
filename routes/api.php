@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\VendorController;
 use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,7 @@ Route::group([
     Route::post('users/edit/{id}', [UserController::class, 'update']);
     Route::delete('users/{id}', [UserController::class, 'destroy']);
     Route::post('auth/user/login', [AuthController::class, 'login']);
+
+    Route::post('vendors/add', [VendorController::class, 'store']);
+    Route::get('vendors/{id}', [VendorController::class, 'show']);
 });
